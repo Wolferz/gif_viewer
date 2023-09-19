@@ -66,7 +66,6 @@ def animate(current_frame):
     else:
         fr = 0
     data = (str(fr), str(current_frame + 1),str(len(frame_list)), str(current_gif + 1), str(len(album)))
-    print("\nFrame:",current_frame,'\nImage:',current_gif)
     rate_entry.config(label='FPS: {}    Frame: {}/{}    Image: {}/{}'.format(data[0],data[1],data[2],data[3],data[4]))
     if playing:
         master.after(delay,animate,current_frame)
